@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1526994178 source:c:\users\sistemas\documents\tpfinalp3\main.cpp
+	<iostream>
+	"Enemigo.h"
+	"Tablero.h"
+
+1526994402 c:\users\sistemas\documents\tpfinalp3\enemigo.h
+
+1526389589 c:\users\sistemas\documents\tpfinalp3\tablero.h
+
+1527533486 source:c:\users\mauricio\documents\c++ projects\tpfinalp3\main.cpp
+	<iostream>
+	<thread>
+	"Juego.h"
+
+1527533742 c:\users\mauricio\documents\c++ projects\tpfinalp3\juego.h
+	"Enemigo.h"
+	"Tablero.h"
+
+1527532623 c:\users\mauricio\documents\c++ projects\tpfinalp3\enemigo.h
+
+1526995421 c:\users\mauricio\documents\c++ projects\tpfinalp3\tablero.h
+
