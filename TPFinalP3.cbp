@@ -34,6 +34,8 @@
 		</Compiler>
 		<Unit filename="Enemigo.h" />
 		<Unit filename="Juego.h" />
+		<Unit filename="Jugador.h" />
+		<Unit filename="Pieza.h" />
 		<Unit filename="Tablero.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>

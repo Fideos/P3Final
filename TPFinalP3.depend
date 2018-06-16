@@ -21,3 +21,22 @@
 
 1526995421 c:\users\mauricio\documents\c++ projects\tpfinalp3\tablero.h
 
+1529181903 source:c:\users\mauricio\documents\c++ projects\p3final\main.cpp
+	<iostream>
+	<thread>
+	"Juego.h"
+
+1529187618 c:\users\mauricio\documents\c++ projects\p3final\juego.h
+	"Enemigo.h"
+	"Jugador.h"
+	"Tablero.h"
+
+1529185911 c:\users\mauricio\documents\c++ projects\p3final\enemigo.h
+	"Pieza.h"
+
+1526995421 c:\users\mauricio\documents\c++ projects\p3final\tablero.h
+
+1529185126 c:\users\mauricio\documents\c++ projects\p3final\pieza.h
+
+1529187778 c:\users\mauricio\documents\c++ projects\p3final\jugador.h
+
