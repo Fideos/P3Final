@@ -6,7 +6,7 @@
 #include "Tablero.h"
 
 
-class Juego{
+class Juego{ //Esto es un asco. Pero funciona.
 
 private:
 
@@ -20,13 +20,15 @@ private:
 
 public:
 
-    void Initialize(); //Placeholder
+    void Initialize();
 
-    void PrintCurrentPos();
+    void Print(); //Placeholder
 
-    void MovePiece();
+    void MovePiece(int index);
 
 private:
+
+    void PrintCurrentPos(int index); //Imprime las coordenadas actuales de la pieza.
 
     int GetRandomNumber();
 
@@ -37,30 +39,49 @@ private:
 /* PUBLIC */
 
 void Juego::Initialize(){
-    //enem->SetPosition(5, 5);
-    //enem2->SetPosition(5, 6);
     enem = new Enemigo(5, GetInitialPositions(1));
     enem2 = new Enemigo(5, GetInitialPositions(2));
     this -> movimientos = 0;
 }
 
-void Juego::PrintCurrentPos(){ //Modificar para que reciba y imprima determinada pieza.
-    std::cout << "Pieza 1 en posicion: X:" << enem->GetPosition().x << ", Y:" << enem->GetPosition().y << std::endl;
-    std::cout << "Pieza 2 en posicion: X:" << enem2->GetPosition().x << ", Y:" << enem2->GetPosition().y << std::endl;
-    std::cout << "Movimientos: " << movimientos << std::endl;
+void Juego::Print(){
+    PrintCurrentPos(1);
+    PrintCurrentPos(2);
 }
 
-void Juego::MovePiece(){ //Modificar para que reciba y mueva dererminada pieza.
+void Juego::MovePiece(int index){ // La verdad que no tengo ni idea de por que carajos esto funciona.
+    Pieza* selectedPiece;
+    switch(index){
+        case 1 :
+            selectedPiece = enem;
+            break;
+        case 2 :
+            selectedPiece = enem2;
+            break;
+    }
     int num = rand()%2;
     if(num == 0){
-        enem->SetPosition(enem->GetPosition().x + GetRandomNumber(), enem->GetPosition().y);
+        selectedPiece->SetPosition(selectedPiece->GetPosition().x + GetRandomNumber(), selectedPiece->GetPosition().y);
     }else{
-        enem->SetPosition(enem->GetPosition().x, enem->GetPosition().y+ GetRandomNumber());
+        selectedPiece->SetPosition(selectedPiece->GetPosition().x, selectedPiece->GetPosition().y+ GetRandomNumber());
     }
     this -> movimientos++;
 }
 
 /* PRIVATE */
+
+void Juego::PrintCurrentPos(int index){
+    Pieza* selectedPiece;
+    switch(index){
+        case 1 :
+            selectedPiece = enem;
+            break;
+        case 2 :
+            selectedPiece = enem2;
+            break;
+    }
+    std::cout << "Pieza " << index << " en posicion: X:" << selectedPiece->GetPosition().x << ", Y:" << selectedPiece->GetPosition().y << std::endl << std::endl;
+}
 
 int Juego::GetRandomNumber(){
     int num = rand()%2;
