@@ -1,6 +1,8 @@
 #ifndef JUGADOR_H_INCLUDED
 #define JUGADOR_H_INCLUDED
 
+#include "Pieza.h"
+
 class Jugador : public Pieza{
 
 private:
@@ -9,6 +11,8 @@ private:
 
     int puntaje;
 
+    position resetPos;
+
 public:
 
     Jugador(int col, position initPos, int vidaMax){
@@ -16,6 +20,7 @@ public:
         this->color = col;
         this->vidaActual = vidaMax;
         this->puntaje = 0;
+        this->resetPos = initPos;
     }
 
     int GetVida();
@@ -41,6 +46,7 @@ void Jugador::AumentarPuntaje(int puntos){
 
 void Jugador::PerderVida(){
     vidaActual--;
+    currentPos = resetPos;
 }
 
 #endif // JUGADOR_H_INCLUDED

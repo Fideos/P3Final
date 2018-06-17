@@ -21,12 +21,12 @@
 
 1526995421 c:\users\mauricio\documents\c++ projects\tpfinalp3\tablero.h
 
-1529189835 source:c:\users\mauricio\documents\c++ projects\p3final\main.cpp
+1529196217 source:c:\users\mauricio\documents\c++ projects\p3final\main.cpp
 	<iostream>
 	<thread>
 	"Juego.h"
 
-1529190381 c:\users\mauricio\documents\c++ projects\p3final\juego.h
+1529196254 c:\users\mauricio\documents\c++ projects\p3final\juego.h
 	"Enemigo.h"
 	"Jugador.h"
 	"Tablero.h"
@@ -38,5 +38,6 @@
 
 1529185126 c:\users\mauricio\documents\c++ projects\p3final\pieza.h
 
-1529187778 c:\users\mauricio\documents\c++ projects\p3final\jugador.h
+1529195141 c:\users\mauricio\documents\c++ projects\p3final\jugador.h
+	"Pieza.h"
 

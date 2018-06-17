@@ -18,13 +18,12 @@ int main()
 
     miJuego.Initialize();
     miJuego.Print();
-    /*
-    miJuego.Initialize(enem2, 6, 4);
-    miJuego.PrintCurrentPos(enem2);
-    */
+
     for (int i = 0; i < 5; i++){
+
         miJuego.MovePiece(1);
         miJuego.MovePiece(2);
+        miJuego.MovePiece(3);
         miJuego.Print();
     }
 
