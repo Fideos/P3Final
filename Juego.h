@@ -51,21 +51,28 @@ private:
 
 /* PUBLIC */
 
-void Juego::Initialize(){
-    enem = new Enemigo(1, GetInitialPositions(1));
-    enem2 = new Enemigo(1, GetInitialPositions(2));
-    player = new Jugador(2, GetInitialPositions(3), 3);
+void Juego::Initialize(){ //Cambiar por Inicializar tablero leyendo archivo
+    int values[10][9] = {1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0};
+    miTablero.CargarTableroHardCode(values);
+    enem = new Enemigo(4, GetInitialPositions(1));
+    enem2 = new Enemigo(4, GetInitialPositions(2));
+    player = new Jugador(1, GetInitialPositions(3), 3);
     this -> movimientos = 0;
 }
 
-void Juego::Print(){
+void Juego::Print(){ //Función que se llama para imprimir el tablero.
     CheckCurrentPositions();
+    miTablero.ReiniciarColores(15);
+    miTablero.ColorearPosicion(enem->GetPosition(), enem->GetColor());
+    miTablero.ColorearPosicion(enem2->GetPosition(), enem2->GetColor());
+    miTablero.ColorearPosicion(player->GetPosition(), player->GetColor());
+    miTablero.ImprimirTablero();
     PrintCurrentPos(1);
     PrintCurrentPos(2);
     PrintCurrentPos(3);
 }
 
-void Juego::MovePiece(int index){ // La verdad que no tengo ni idea de por que carajos esto funciona.
+void Juego::MovePiece(int index){
     Pieza* selectedPiece;
     switch(index){
         case 1 :
@@ -90,6 +97,10 @@ void Juego::MovePiece(int index){ // La verdad que no tengo ni idea de por que c
 /* PRIVATE */
 
 void Juego::CheckCurrentPositions(){
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
+    SetConsoleCP(437);
+    std::cout << "Jugador 1 \n" << (char)3 << player->GetVida() << std::endl << std::endl;
+    //std::cout << "Jugador 2 " << c << player2->GetVida() << std::endl << std::endl;
     if(enem->GetPosition().x == player->GetPosition().x && enem->GetPosition().y == player->GetPosition().y){
         player->PerderVida();
         std::cout << "Jugador 1 pierde una vida. Le quedan: " << player->GetVida() << std::endl << std::endl;
@@ -121,7 +132,8 @@ void Juego::PrintCurrentPos(int index){
             selectedPiece = player;
             break;
     }
-    std::cout << "Pieza " << index << " en posicion: X:" << selectedPiece->GetPosition().x << ", Y:" << selectedPiece->GetPosition().y << std::endl << std::endl;
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
+    std::cout << std::endl << "Pieza " << index << " en posicion: X:" << selectedPiece->GetPosition().x << ", Y:" << selectedPiece->GetPosition().y << std::endl;
 }
 
 int Juego::GetRandomNumber(){

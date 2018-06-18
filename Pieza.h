@@ -18,6 +18,8 @@ public:
 
     void SetColor(int color);
 
+    int GetColor();
+
     void SetPosition(int setX, int setY);
 
     position GetPosition();
@@ -26,6 +28,10 @@ public:
 
 void Pieza::SetColor(int colorID){
     this->color == colorID;
+}
+
+int Pieza::GetColor(){
+    return this->color;
 }
 
 void Pieza::SetPosition(int setX, int setY){

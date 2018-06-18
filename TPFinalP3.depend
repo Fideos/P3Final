@@ -41,3 +41,47 @@
 1529195141 c:\users\mauricio\documents\c++ projects\p3final\jugador.h
 	"Pieza.h"
 
+1529270675 source:c:\documents and settings\gaspar\mis documentos\c++\p3tp\main.cpp
+	<iostream>
+	<thread>
+	<stdlib.h>
+	<windows.h>
+	"Juego.h"
+
+1529275634 c:\documents and settings\gaspar\mis documentos\c++\p3tp\juego.h
+	"Enemigo.h"
+	"Jugador.h"
+	"Tablero.h"
+
+1529182018 c:\documents and settings\gaspar\mis documentos\c++\p3tp\enemigo.h
+	"Pieza.h"
+
+1529264583 c:\documents and settings\gaspar\mis documentos\c++\p3tp\pieza.h
+
+1529182018 c:\documents and settings\gaspar\mis documentos\c++\p3tp\jugador.h
+	"Pieza.h"
+
+1529270638 c:\documents and settings\gaspar\mis documentos\c++\p3tp\tablero.h
+
+1529270675 source:c:\users\sistemas\documents\c++ projects\p3tp\main.cpp
+	<iostream>
+	<thread>
+	<stdlib.h>
+	<windows.h>
+	"Juego.h"
+
+1529275634 c:\users\sistemas\documents\c++ projects\p3tp\juego.h
+	"Enemigo.h"
+	"Jugador.h"
+	"Tablero.h"
+
+1529182018 c:\users\sistemas\documents\c++ projects\p3tp\enemigo.h
+	"Pieza.h"
+
+1529264583 c:\users\sistemas\documents\c++ projects\p3tp\pieza.h
+
+1529182018 c:\users\sistemas\documents\c++ projects\p3tp\jugador.h
+	"Pieza.h"
+
+1529270638 c:\users\sistemas\documents\c++ projects\p3tp\tablero.h
+
