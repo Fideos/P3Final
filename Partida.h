@@ -2,7 +2,7 @@
 #define PARTIDA_H_INCLUDED
 
 #include <thread>
-#include <pthread.h>
+//#include <pthread.h>
 #include <mutex>
 
 #include "Juego.h"
@@ -45,13 +45,13 @@ void Partida::Run(){
     system("CLS");
     bool lost = false;
     bool won = false;
-    /*
-    std::thread imprimirTh(ImprimirTablero);
-    std::thread enem1Th(MoverEnemigo1);
-    std::thread enem2Th(MoverEnemigo2);
-    std::thread juga1Th(MoverJugador1);
-    std::thread juga2Th(MoverJugador2);
-    */
+        /*
+    std::thread imprimirTh(ImprimirTablero, NULL);
+    std::thread enem1Th(MoverEnemigo1, NULL);
+    std::thread enem2Th(MoverEnemigo2, NULL);
+    std::thread juga1Th(MoverJugador1, NULL);
+    std::thread juga2Th(MoverJugador2, NULL);
+        */
     while(!lost && !won){
             /*
         enem1Th.join();
@@ -78,6 +78,10 @@ void Partida::Run(){
         MoverJugador2();
         system("CLS");
         ImprimirTablero();
+        if(miJuego.CheckIfWon()){
+            won = true;
+            lost = false;
+        }
         if(miJuego.GetGameStats().vidasP1 <= 0 && miJuego.GetGameStats().vidasP2 <= 0){
             lost = true;
         }
@@ -86,6 +90,9 @@ void Partida::Run(){
     if(lost){
         std::cout << "Ambos se murieron.\nFin del juego." << std::endl;
     }
+    if(won){
+        std::cout << "Recorrieron todo el tabero. Victoria" << std::endl;
+    }
 }
 
 //Private
@@ -93,7 +100,7 @@ void Partida::Run(){
 void Partida::ImprimirTablero(){
     mtx.lock();
     miJuego.Print();
-    Sleep(300);
+    Sleep(200);
     mtx.unlock();
 }
 

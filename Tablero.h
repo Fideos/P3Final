@@ -4,6 +4,7 @@
 struct mapa{ //El tablero tiene 2 capas. Para cargar los valores hay que usar "Tablero[x][x].valores = ...".
     int valores;
     int colores;
+    bool recorrido;
 };
 
 class Tablero{
@@ -30,12 +31,17 @@ public:
 
     int GivePositionScore(position pos);
 
+    bool CheckIfRecorrido();
+
+    void MarcarRecorrido(position pos);
+
 };
 
 void Tablero::CargarTableroHardCode(int values[9][9]){ //Una funcion para cargar el tablero a mano.
     for (int i = 0; i < 9; i++){
         for (int j = 0; j < 9; j++){
             tablero[i][j].valores = values[i][j];
+            tablero[i][j].recorrido = false;
             ReiniciarColores(15);
         }
     }
@@ -79,11 +85,18 @@ void Tablero::ReiniciarColores(int color){ //Recolorea el tablero. Llamar en cad
     for(int i = 0; i < 9; i++){
         for(int j = 0; j < 9; j++){
             tablero[i][j].colores = color;
+            if(tablero[i][j].recorrido == true){
+                position pos;
+                pos.x = i;
+                pos.y = j;
+                ColorearPosicion(pos, 8);
+            }
             if(tablero[i][j].valores == 0){
                 position pos;
                 pos.x = i;
                 pos.y = j;
                 ColorearPosicion(pos, 2);
+                MarcarRecorrido(pos);
             }
         }
     }
@@ -122,6 +135,22 @@ position Tablero::GetPosicionesIniciales(int index){
 
 int Tablero::GivePositionScore(position pos){
     return this->tablero[pos.x][pos.y].valores;
+}
+
+bool Tablero::CheckIfRecorrido(){
+    for(int i = 0; i < 9; i++){
+        for(int j = 0; j < 9; j++){
+            if(tablero[i][j].recorrido == false){
+                return false;
+                break;
+            }
+        }
+    }
+    return true;
+}
+
+void Tablero::MarcarRecorrido(position pos){
+    tablero[pos.x][pos.y].recorrido = true;
 }
 
 #endif // TABLERO_H_INCLUDED

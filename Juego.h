@@ -48,6 +48,8 @@ public:
 
     estadisticas GetGameStats();
 
+    bool CheckIfWon();
+
 private:
 
     void CheckCurrentPositions();
@@ -237,7 +239,12 @@ void Juego::GiveScore(int index){
     }
     if(!isEnemy){
         selectedPlayer->AumentarPuntaje(miTablero.GivePositionScore(selectedPlayer->GetPosition()));
+        this->miTablero.MarcarRecorrido(selectedPlayer->GetPosition());
     }
+}
+
+bool Juego::CheckIfWon(){
+    return miTablero.CheckIfRecorrido();
 }
 
 void Juego::UpdateStats(){
