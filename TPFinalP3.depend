@@ -41,27 +41,27 @@
 1529195141 c:\users\mauricio\documents\c++ projects\p3final\jugador.h
 	"Pieza.h"
 
-1529270675 source:c:\documents and settings\gaspar\mis documentos\c++\p3tp\main.cpp
+1529378756 source:c:\documents and settings\gaspar\mis documentos\c++\p3tp\main.cpp
 	<iostream>
 	<thread>
 	<stdlib.h>
 	<windows.h>
-	"Juego.h"
+	"Partida.h"
 
-1529275634 c:\documents and settings\gaspar\mis documentos\c++\p3tp\juego.h
+1529380608 c:\documents and settings\gaspar\mis documentos\c++\p3tp\juego.h
 	"Enemigo.h"
 	"Jugador.h"
 	"Tablero.h"
 
-1529182018 c:\documents and settings\gaspar\mis documentos\c++\p3tp\enemigo.h
+1529309242 c:\documents and settings\gaspar\mis documentos\c++\p3tp\enemigo.h
 	"Pieza.h"
 
-1529264583 c:\documents and settings\gaspar\mis documentos\c++\p3tp\pieza.h
+1529371989 c:\documents and settings\gaspar\mis documentos\c++\p3tp\pieza.h
 
-1529182018 c:\documents and settings\gaspar\mis documentos\c++\p3tp\jugador.h
+1529309242 c:\documents and settings\gaspar\mis documentos\c++\p3tp\jugador.h
 	"Pieza.h"
 
-1529270638 c:\documents and settings\gaspar\mis documentos\c++\p3tp\tablero.h
+1529380436 c:\documents and settings\gaspar\mis documentos\c++\p3tp\tablero.h
 
 1529270675 source:c:\users\sistemas\documents\c++ projects\p3tp\main.cpp
 	<iostream>
@@ -84,4 +84,32 @@
 	"Pieza.h"
 
 1529270638 c:\users\sistemas\documents\c++ projects\p3tp\tablero.h
+
+1529368673 source:c:\documents and settings\gaspar\mis documentos\c++\p3tp-master\main.cpp
+	<iostream>
+	<thread>
+	<stdlib.h>
+	<windows.h>
+	"Juego.h"
+
+1529368999 c:\documents and settings\gaspar\mis documentos\c++\p3tp-master\juego.h
+	"Enemigo.h"
+	"Jugador.h"
+	"Tablero.h"
+
+1529309242 c:\documents and settings\gaspar\mis documentos\c++\p3tp-master\enemigo.h
+	"Pieza.h"
+
+1529309242 c:\documents and settings\gaspar\mis documentos\c++\p3tp-master\pieza.h
+
+1529309242 c:\documents and settings\gaspar\mis documentos\c++\p3tp-master\jugador.h
+	"Pieza.h"
+
+1529369077 c:\documents and settings\gaspar\mis documentos\c++\p3tp-master\tablero.h
+
+1529379777 c:\documents and settings\gaspar\mis documentos\c++\p3tp\partida.h
+	<thread>
+	<pthread.h>
+	<mutex>
+	"Juego.h"
 

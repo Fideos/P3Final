@@ -26,10 +26,6 @@ public:
 
 };
 
-void Pieza::SetColor(int colorID){
-    this->color == colorID;
-}
-
 int Pieza::GetColor(){
     return this->color;
 }
